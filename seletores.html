@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery essencial</title>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="#">Brasil</a>
+        <a href="#">Chile</a>
+        <a href="#">China</a>
+        <a href="#">Argentina</a>
+        <a href="#">EUA</a>
+    </nav>
+    
+    <a href="#">País Excluído</a>
+    <script>
+        alert("Essa página contém " + $('nav a').length + " países.");
+        
+        $(function(){
+            $('nav a:first').css('color','red'); // primeiro elemento
+            $('nav a:last').css('color','green'); //ultimo elemento
+            $('nav a:odd').css('color','yellow'); //elementos pares
+            $('nav a:even').css('color','pink'); //elementos ímpares
+            $('nav a:nth(1)').css('color','aqua'); //elementos específicos
+             $('nav a:contains("Brasil")').css('color','aqua'); //contém específicos
+        });
+    </script>
+
+</body>
+
+</html>
